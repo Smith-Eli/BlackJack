@@ -1773,7 +1773,12 @@ cardpanelThree.add(labelSeven);
             dealerTotalThree += 11;
         }
         }   
-        
+        if (randomNumFour == 2){
+            JLabel labelFour = new JLabel("🃓");
+            
+            dealerTotalTwo = 3;
+        labelFour.setFont(new Font("Serif", Font.BOLD, 200));
+        }
         if (randomNumEight == 39){
             JLabel labelSeven = new JLabel("🃑");
             
@@ -1788,7 +1793,9 @@ cardpanelThree.add(labelSeven);
             dealerTotalThree += 11;
         }
         }   
+        cardpanelThree.add(labelFour);
 dealerTotalFinalTwo += dealerTotalThree;
+
 System.out.println("The Dealer's New Total Is: " + dealerTotalFinalTwo);
 if (dealerTotalFinalTwo > 21){
     System.out.println("You Win");
@@ -1809,12 +1816,6 @@ else{
 
 });
 }
-if (randomNumFour == 2){
-    JLabel labelFour = new JLabel("🃓");
-    
-    dealerTotalTwo = 3;
-labelFour.setFont(new Font("Serif", Font.BOLD, 200));
-cardpanelThree.add(labelFour);
 labelFour.setVisible(false);stand.addActionListener(new ActionListener(){
 
     public void actionPerformed(ActionEvent evt){
